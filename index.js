@@ -155,6 +155,10 @@ function displayScores() {
 
   for(var i = 0; i < highScores.length; i++) {
     console.log(chalk.red(highScores[i].name) + " : " + chalk.blue(highScores[i].score))
+
+    if(score > highScores[i].score) {
+      console.log("Congrats! You beated " + highScores[i].name + "'s score. Send me a screenshot & I'll update it here.")
+    }
   }
 }
 
